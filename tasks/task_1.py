@@ -15,5 +15,5 @@ def log(func):
             return result
         except Exception as e:
             print(f"Ошибка: {e.__class__.__name__}: {e}")
-            raise  # обязательно пробрасываем дальше
+            raise
     return wrapper

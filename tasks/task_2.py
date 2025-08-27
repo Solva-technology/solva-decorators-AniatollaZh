@@ -6,7 +6,7 @@ def simple_cache(func):
 
     @wraps(func)
     def wrapper(*args, **kwargs):
-        key = (args, frozenset(kwargs.items()))
+        key = repr((args, kwargs))
         if key in cache:
             print("Из кэша")
             return cache[key]
